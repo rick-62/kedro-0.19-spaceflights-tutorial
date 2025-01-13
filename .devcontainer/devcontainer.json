@@ -21,7 +21,9 @@
 			"settings": {},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
-				"kedro.Kedro"
+				"kedro.Kedro",
+				"mechatroner.rainbow-csv",
+				"ms-toolsai.datawrangler"
 			]
 		}
 	},
