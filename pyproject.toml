@@ -56,11 +56,6 @@ tools = "['None']"
 example_pipeline = "False"
 source_dir = "src"
 
-[tool.pytest.ini_options]
-addopts = """
---cov-report term-missing \
---cov src/spaceflights_pandas -ra"""
-
 [tool.coverage.report]
 fail_under = 0
 show_missing = true

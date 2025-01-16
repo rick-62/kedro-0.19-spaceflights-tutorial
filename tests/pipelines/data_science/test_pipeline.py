@@ -48,14 +48,14 @@ def test_split_data_missing_price(dummy_data, dummy_parameters):
 def test_data_science_pipeline(caplog, dummy_data, dummy_parameters):
     pipeline = (
         create_ds_pipeline()
-        .from_nodes("split_data_node")
-        .to_nodes("evaluate_model_node")
+        .from_nodes("active_modelling_pipeline.split_data_node")
+        .to_nodes("active_modelling_pipeline.evaluate_model_node")
     )
     catalog = DataCatalog()
     catalog.add_feed_dict(
         {
             "model_input_table" : dummy_data,
-            "params:model_options": dummy_parameters["model_options"],
+            "params:active_modelling_pipeline.model_options": dummy_parameters["model_options"],
         }
     )
 

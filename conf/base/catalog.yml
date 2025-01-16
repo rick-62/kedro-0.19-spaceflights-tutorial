@@ -65,7 +65,12 @@ model_input_table:
   type: pandas.ParquetDataset
   filepath: data/03_primary/model_input_table.parquet
 
-regressor:
+active_modelling_pipeline.regressor:
   type: pickle.PickleDataset
-  filepath: data/06_models/regressor.pickle
+  filepath: data/06_models/regressor_active.pickle
+  versioned: true
+
+candidate_modelling_pipeline.regressor:
+  type: pickle.PickleDataset
+  filepath: data/06_models/regressor_candidate.pickle
   versioned: true
